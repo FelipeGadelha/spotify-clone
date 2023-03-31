@@ -1,5 +1,5 @@
 {
-  "name": "iniciando-react",
+  "name": "spotify-clone",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

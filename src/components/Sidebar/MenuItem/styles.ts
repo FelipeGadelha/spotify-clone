@@ -1,11 +1,19 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Container = styled(Link)`
+//const { isActive } = useContext(SidebarContext);
+
+interface ISidebarProps {
+  active: Boolean;
+};
+
+export const Container = styled(Link)<ISidebarProps>`
   text-decoration: none;
   list-style: none;
   border-radius: 5px;
-  display: block;
+  display: ${p => p.active ? 'block' : 'flex'};
+  align-items: center;
+  justify-content: center;
   color: var(--grey-50);
   cursor: pointer;
   font-size: 15px;
@@ -40,4 +48,7 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+export const Title = styled.div<ISidebarProps>`
+  display: ${ p => p.active ? 'contents' : 'none'};
 `;

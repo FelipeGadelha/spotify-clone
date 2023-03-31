@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
-import { Container, IconMenu, Icon } from './styles';
+import React, { ReactElement, useContext } from 'react';
+import { SidebarContext } from '../../../contexts/SidebarContext';
+import { Container, IconMenu, Icon, Title } from './styles';
 
 interface ItemMenuProps {
   title: string;
@@ -8,9 +9,11 @@ interface ItemMenuProps {
 };
 
 const ItemMenu: React.FC<ItemMenuProps> = ({icon, title, path}) => {
+
+  const { isActive } = useContext(SidebarContext);
   return(
-    <Container to={path}>
-        <IconMenu><Icon>{icon}</Icon></IconMenu>{title}
+    <Container active={ isActive } to={path}>
+        <IconMenu><Icon>{icon}</Icon></IconMenu><Title active={ isActive }>{title}</Title>
     </Container>
   );
 }

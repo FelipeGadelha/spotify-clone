@@ -27,10 +27,11 @@ export const TopSection = styled.div`
 `;
 
 export const Divider = styled.div`
-  width: 100%;
+  width: 96%;
   height: 2px;
   border-radius: 1px;
   background: #1e1e1e;
+  margin: auto;
 `;
 
 const sharedIconStyle = css<SectionProps>`

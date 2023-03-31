@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-//  background:  #FFF;
-  background:  #1e1e1e;
+  background: #1e1e1e;
   grid-area: main;
   overflow-y: auto;
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
-  
+
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -27,14 +26,6 @@ export const Container = styled.main`
 
 export const Content = styled.div`
   width: 100%;
-  //background: green;
+  background: green;
   border-radius: 1rem;
-`;
-
-export const Widgets = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem;
-  gap: 2.5rem;
-  margin: 0 auto;
 `;
